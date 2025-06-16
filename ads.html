@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Ads - FUTO GIST</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>FUTO GIST</h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tickets.html" class="nav-link">Tickets</a>
+                <a href="ads.html" class="nav-link active">Ads</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Business Directory</h1>
+            <p>Discover amazing businesses serving the FUTO community</p>
+        </div>
+    </section>
+
+    <!-- Business Ads Grid -->
+    <section class="ads-section">
+        <div class="container">
+            <div class="ads-grid">
+                <!-- Food & Restaurant Ads -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=250&fit=crop&auto=format" alt="Campus Eatery" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Campus Eatery</h3>
+                        <p class="ad-category">Food & Restaurant</p>
+                        <p>Delicious local and continental dishes delivered right to your hostel. Fresh ingredients, affordable prices!</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-clock"></i> 24/7 Service</span>
+                            <span><i class="fas fa-motorcycle"></i> Free Delivery</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Campus Eatery', '08012345678')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tech Services Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&h=250&fit=crop&auto=format" alt="Tech Repair Hub" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Tech Repair Hub</h3>
+                        <p class="ad-category">Tech Services</p>
+                        <p>Professional laptop, phone, and gadget repair services. Quick turnaround time with warranty on all repairs.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-tools"></i> Expert Repair</span>
+                            <span><i class="fas fa-shield-alt"></i> Warranty</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Tech Repair Hub', '08023456789')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fashion Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=250&fit=crop&auto=format" alt="Fashion Studio" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Fashion Studio</h3>
+                        <p class="ad-category">Fashion & Style</p>
+                        <p>Trendy clothes, accessories, and custom tailoring services. Latest fashion at student-friendly prices.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-cut"></i> Custom Tailoring</span>
+                            <span><i class="fas fa-tags"></i> Student Discounts</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Fashion Studio', '08034567890')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Laundry Service Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=250&fit=crop&auto=format" alt="Fresh Laundry" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Fresh Laundry</h3>
+                        <p class="ad-category">Laundry Services</p>
+                        <p>Professional laundry and dry cleaning services. Pickup and delivery available for hostels.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-truck"></i> Pickup & Delivery</span>
+                            <span><i class="fas fa-sparkles"></i> Premium Care</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Fresh Laundry', '08045678901')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Study Materials Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop&auto=format" alt="Study Central" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Study Central</h3>
+                        <p class="ad-category">Educational Services</p>
+                        <p>Past questions, textbooks, printing services, and academic support materials for all departments.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-print"></i> Printing Services</span>
+                            <span><i class="fas fa-graduation-cap"></i> All Departments</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Study Central', '08056789012')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Transportation Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=250&fit=crop&auto=format" alt="Campus Rides" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Campus Rides</h3>
+                        <p class="ad-category">Transportation</p>
+                        <p>Reliable transportation services within and outside campus. Safe, affordable, and convenient rides.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-clock"></i> 24/7 Available</span>
+                            <span><i class="fas fa-shield-alt"></i> Safe & Secure</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Campus Rides', '08067890123')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grocery Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&h=250&fit=crop&auto=format" alt="Campus Grocery" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Campus Grocery</h3>
+                        <p class="ad-category">Grocery & Supplies</p>
+                        <p>Fresh groceries, snacks, toiletries, and daily essentials delivered to your doorstep.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-leaf"></i> Fresh Products</span>
+                            <span><i class="fas fa-truck"></i> Home Delivery</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Campus Grocery', '08078901234')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Barbing Salon Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=250&fit=crop&auto=format" alt="Style Palace" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Style Palace</h3>
+                        <p class="ad-category">Beauty & Grooming</p>
+                        <p>Professional haircuts, styling, and grooming services. Both male and female services available.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-scissors"></i> Professional Styling</span>
+                            <span><i class="fas fa-user-friends"></i> Unisex Salon</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Style Palace', '08089012345')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Photography Ad -->
+                <div class="ad-card">
+                    <div class="ad-image">
+                        <img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=400&h=250&fit=crop&auto=format" alt="Lens Masters" loading="lazy">
+                    </div>
+                    <div class="ad-content">
+                        <h3>Lens Masters</h3>
+                        <p class="ad-category">Photography & Media</p>
+                        <p>Professional photography for events, portraits, and special occasions. High-quality photos at affordable rates.</p>
+                        <div class="ad-features">
+                            <span><i class="fas fa-images"></i> Event Coverage</span>
+                            <span><i class="fas fa-portrait"></i> Portrait Sessions</span>
+                        </div>
+                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Lens Masters', '08090123456')">
+                            <i class="fab fa-whatsapp"></i> Contact Business
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Business Hero Section -->
+    <section class="register-hero">
+        <div class="container">
+            <div class="register-content">
+                <h2>Want to Advertise Your Business?</h2>
+                <p>Join hundreds of businesses reaching the FUTO community through our platform</p>
+                <div class="register-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-users"></i>
+                        <span>Reach 20,000+ Students</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Boost Your Sales</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Premium Visibility</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-large register-btn" onclick="registerBusiness()">
+                    <i class="fab fa-whatsapp"></i> Click This Button to Register and Advertise Your Business
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUTO GIST</h3>
+                    <p>Connecting the FUTO community through business, entertainment, and information.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/2348082610560" class="social-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://t.me/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Event Tickets</a></li>
+                        <li><a href="ads.html"><i class="fas fa-bullhorn"></i> Business Ads</a></li>
+                        <li><a href="blog.html"><i class="fas fa-blog"></i> Campus Blog</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>08082610560</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <p>FUTO Campus, Owerri</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Response Time</strong>
+                                <p>Within 30 minutes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FUTO GIST. All rights reserved. | Proudly serving the FUTO community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

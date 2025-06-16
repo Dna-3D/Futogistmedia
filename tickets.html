@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - FUTO GIST</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>FUTO GIST</h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tickets.html" class="nav-link active">Tickets</a>
+                <a href="ads.html" class="nav-link">Ads</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Event Tickets</h1>
+            <p>Get your tickets for upcoming events and shows</p>
+        </div>
+    </section>
+
+    <!-- Tickets Grid -->
+    <section class="tickets-section">
+        <div class="container">
+            <div class="tickets-grid">
+                <!-- Music Festival Ticket -->
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="ticket-content">
+                        <h3>Campus Music Festival</h3>
+                        <p class="ticket-date">
+                            <i class="fas fa-calendar"></i> December 15, 2025
+                        </p>
+                        <p class="ticket-time">
+                            <i class="fas fa-clock"></i> 6:00 PM - 11:00 PM
+                        </p>
+                        <p class="ticket-venue">
+                            <i class="fas fa-map-marker-alt"></i> FUTO Main Auditorium
+                        </p>
+                        <div class="ticket-price">₦2,000</div>
+                        <button class="btn btn-primary ticket-btn" onclick="buyTicket('Campus Music Festival')">
+                            <i class="fab fa-whatsapp"></i> Buy Ticket
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Drama Night Ticket -->
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <div class="ticket-content">
+                        <h3>Drama Night</h3>
+                        <p class="ticket-date">
+                            <i class="fas fa-calendar"></i> December 20, 2025
+                        </p>
+                        <p class="ticket-time">
+                            <i class="fas fa-clock"></i> 7:00 PM - 10:00 PM
+                        </p>
+                        <p class="ticket-venue">
+                            <i class="fas fa-map-marker-alt"></i> Theatre Hall
+                        </p>
+                        <div class="ticket-price">₦1,500</div>
+                        <button class="btn btn-primary ticket-btn" onclick="buyTicket('Drama Night')">
+                            <i class="fab fa-whatsapp"></i> Buy Ticket
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tech Conference Ticket -->
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="ticket-content">
+                        <h3>Tech Conference 2025</h3>
+                        <p class="ticket-date">
+                            <i class="fas fa-calendar"></i> January 10, 2026
+                        </p>
+                        <p class="ticket-time">
+                            <i class="fas fa-clock"></i> 9:00 AM - 5:00 PM
+                        </p>
+                        <p class="ticket-venue">
+                            <i class="fas fa-map-marker-alt"></i> Engineering Complex
+                        </p>
+                        <div class="ticket-price">₦3,000</div>
+                        <button class="btn btn-primary ticket-btn" onclick="buyTicket('Tech Conference 2025')">
+                            <i class="fab fa-whatsapp"></i> Buy Ticket
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Comedy Show Ticket -->
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <i class="fas fa-laugh"></i>
+                    </div>
+                    <div class="ticket-content">
+                        <h3>Comedy Night</h3>
+                        <p class="ticket-date">
+                            <i class="fas fa-calendar"></i> December 22, 2025
+                        </p>
+                        <p class="ticket-time">
+                            <i class="fas fa-clock"></i> 8:00 PM - 11:00 PM
+                        </p>
+                        <p class="ticket-venue">
+                            <i class="fas fa-map-marker-alt"></i> Students' Center
+                        </p>
+                        <div class="ticket-price">₦1,800</div>
+                        <button class="btn btn-primary ticket-btn" onclick="buyTicket('Comedy Night')">
+                            <i class="fab fa-whatsapp"></i> Buy Ticket
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fashion Show Ticket -->
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="ticket-content">
+                        <h3>Fashion Week</h3>
+                        <p class="ticket-date">
+                            <i class="fas fa-calendar"></i> January 5, 2026
+                        </p>
+                        <p class="ticket-time">
+                            <i class="fas fa-clock"></i> 5:00 PM - 9:00 PM
+                        </p>
+                        <p class="ticket-venue">
+                            <i class="fas fa-map-marker-alt"></i> Great Hall
+                        </p>
+                        <div class="ticket-price">₦2,500</div>
+                        <button class="btn btn-primary ticket-btn" onclick="buyTicket('Fashion Week')">
+                            <i class="fab fa-whatsapp"></i> Buy Ticket
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sports Event Ticket -->
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <div class="ticket-content">
+                        <h3>Inter-Faculty Sports</h3>
+                        <p class="ticket-date">
+                            <i class="fas fa-calendar"></i> January 15, 2026
+                        </p>
+                        <p class="ticket-time">
+                            <i class="fas fa-clock"></i> 10:00 AM - 6:00 PM
+                        </p>
+                        <p class="ticket-venue">
+                            <i class="fas fa-map-marker-alt"></i> Sports Complex
+                        </p>
+                        <div class="ticket-price">₦1,000</div>
+                        <button class="btn btn-primary ticket-btn" onclick="buyTicket('Inter-Faculty Sports')">
+                            <i class="fab fa-whatsapp"></i> Buy Ticket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticket Info Section -->
+    <section class="ticket-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>How to Buy</h3>
+                    <p>Click on any "Buy Ticket" button to send us a WhatsApp message. We'll guide you through the payment process.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Payment Methods</h3>
+                    <p>We accept bank transfers, mobile money, and cash payments. Payment details will be shared via WhatsApp.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Ticket Delivery</h3>
+                    <p>Digital tickets will be sent to your WhatsApp after successful payment. Show your ticket at the venue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUTO GIST</h3>
+                    <p>Connecting the FUTO community through business, entertainment, and information.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/2348082610560" class="social-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://t.me/futogist" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Event Tickets</a></li>
+                        <li><a href="ads.html"><i class="fas fa-bullhorn"></i> Business Ads</a></li>
+                        <li><a href="blog.html"><i class="fas fa-blog"></i> Campus Blog</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>08082610560</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <p>FUTO Campus, Owerri</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Response Time</strong>
+                                <p>Within 30 minutes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FUTO GIST. All rights reserved. | Proudly serving the FUTO community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
