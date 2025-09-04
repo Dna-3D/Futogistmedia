@@ -61,6 +61,7 @@
                             <span><i class="fas fa-clock"></i> 24/7 Service</span>
                             <span><i class="fas fa-motorcycle"></i> Free Delivery</span>
                         </div>
+<!-- Button with custom phone number -->
 <button class="btn btn-primary ad-btn"
         data-name="Diet Planet"
         data-phone="09135371742"
@@ -69,21 +70,32 @@
 </button>
 
 <script>
+// Your default number (used if data-phone is missing)
 const DEFAULT_PHONE = '08082610560';
 
-function contactBusiness(button) {
-  // Read number from data attribute if present
-  const name  = button.dataset.name || 'Business';
-  let phone   = button.dataset.phone || DEFAULT_PHONE;
+function contactBusiness(el) {
+  // Read data attributes from this specific button
+  const name = el.dataset.name || 'Business';
+  let phone = el.dataset.phone || DEFAULT_PHONE;
 
+  // Clean number (remove non-digits)
   let digits = phone.replace(/\D/g, '');
+
+  // Add +234 if it starts with 0
   if (digits.startsWith('0')) {
-    digits = '234' + digits.slice(1); // Add Nigeria code
+    digits = '234' + digits.slice(1);
   }
 
-  window.open(`https://wa.me/${digits}`, '_blank');
+  // Construct WhatsApp link
+  const waUrl = `https://wa.me/${digits}?text=${encodeURIComponent(
+    `Hi! I found your business "${name}" on FUTO GIST and I'm interested in your services. Could you please provide more information?`
+  )}`;
+
+  // Open WhatsApp in a new tab/window
+  window.open(waUrl, '_blank');
 }
 </script>
+
 
                     </div>
                 </div>
