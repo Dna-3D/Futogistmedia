@@ -61,23 +61,30 @@
                             <span><i class="fas fa-clock"></i> 24/7 Service</span>
                             <span><i class="fas fa-motorcycle"></i> Free Delivery</span>
                         </div>
-                        <button class="btn btn-primary ad-btn"
-        onclick="contactBusiness('Diet Planet', '09135371742')">
+<button class="btn btn-primary ad-btn"
+        data-name="Diet Planet"
+        data-phone="09135371742"
+        onclick="contactBusiness(this)">
   <i class="fab fa-whatsapp"></i> Contact Business
 </button>
 
 <script>
-function contactBusiness(name, phone) {
+const DEFAULT_PHONE = '08082610560';
+
+function contactBusiness(button) {
+  // Read number from data attribute if present
+  const name  = button.dataset.name || 'Business';
+  let phone   = button.dataset.phone || DEFAULT_PHONE;
+
   let digits = phone.replace(/\D/g, '');
-
-
   if (digits.startsWith('0')) {
-    digits = '234' + digits.slice(1);
+    digits = '234' + digits.slice(1); // Add Nigeria code
   }
 
   window.open(`https://wa.me/${digits}`, '_blank');
 }
 </script>
+
                     </div>
                 </div>
 
