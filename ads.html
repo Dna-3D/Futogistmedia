@@ -61,9 +61,23 @@
                             <span><i class="fas fa-clock"></i> 24/7 Service</span>
                             <span><i class="fas fa-motorcycle"></i> Free Delivery</span>
                         </div>
-                        <button class="btn btn-primary ad-btn" onclick="contactBusiness('Diet planet', '09135371742')">
-                            <i class="fab fa-whatsapp">09135371742</i> Contact Business
-                        </button>
+                        <button class="btn btn-primary ad-btn"
+        onclick="contactBusiness('Diet Planet', '09135371742')">
+  <i class="fab fa-whatsapp"></i> Contact Business
+</button>
+
+<script>
+function contactBusiness(name, phone) {
+  let digits = phone.replace(/\D/g, '');
+
+
+  if (digits.startsWith('0')) {
+    digits = '234' + digits.slice(1);
+  }
+
+  window.open(`https://wa.me/${digits}`, '_blank');
+}
+</script>
                     </div>
                 </div>
 
