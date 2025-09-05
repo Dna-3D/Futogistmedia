@@ -1373,3 +1373,13 @@ button:focus,
 .fade-in {
     animation: fadeIn 0.6s ease-out;
 }
+
+/* Blog Post Images */
+.blog-post-page img {
+  display: block;
+  max-width: 90%; /* keeps image inside content width */
+  height: auto;   /* preserves aspect ratio */
+  margin: 1rem auto; /* centers image and adds spacing */
+  border-radius: 12px; /* optional – smooth corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional – light shadow */
+}
