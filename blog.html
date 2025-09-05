@@ -45,24 +45,97 @@
     </section>
 
     <!-- Featured Post -->
-    <section class="featured-post">
-        <div class="container">
-            <article class="post-card featured">
-                <div class="post-image">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="post-content">
-                    <div class="post-meta">
-                        <span class="post-category">Campus News</span>
-                        <span class="post-date">December 10, 2025</span>
-                    </div>
-                    <h2>FUTO Ranks Among Top 10 Universities in Nigeria</h2>
-                    <p>Federal University of Technology Owerri has been recognized for its excellence in engineering and technology education. The university's commitment to innovation and research has earned it a prestigious position...</p>
-                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
+<style>
+.post-full {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+.post-full.open {
+    max-height: 1000px; /* large enough to fit content */
+    opacity: 1;
+}
+</style>
+
+<article class="post-card">
+    <div class="post-image">
+        <i class="fas fa-users"></i>
+    </div>
+    <div class="post-content">
+        <div class="post-meta">
+            <span class="post-category">Student Life</span>
+            <span class="post-date">December 8, 2025</span>
         </div>
-    </section>
+        <h3>Top 10 Study Spots on FUTO Campus</h3>
+        <p class="post-excerpt">
+            Looking for the perfect place to study on campus? From library corners to open-air benches, 
+            here are the top 10 student-approved spots that help you stay focused and productive.
+        </p>
+        <p class="post-full">
+            FUTO is full of hidden gems when it comes to finding a great place to study. Whether you’re a bookworm who loves 
+            absolute silence or someone who thrives in a little background noise, there’s a perfect spot for you on campus. 
+            Here are the top 10 student-approved study locations you should check out: <br><br>
+
+            <strong>1. The Main Library</strong> – The go-to place for most serious students. It’s quiet, air-conditioned, 
+            and perfect for deep work. You’ll find both individual cubicles and group tables.<br><br>
+
+            <strong>2. SEET Building Lounge</strong> – A great open space for engineering students or anyone who loves a 
+            collaborative environment. Lots of sockets for charging your devices.<br><br>
+
+            <strong>3. SLT Building Lecture Halls (Off-Peak Hours)</strong> – When lectures are over, these halls become 
+            spacious and quiet. Perfect for small group discussions or late-night cramming.<br><br>
+
+            <strong>4. Hostel Quadrangles</strong> – For those who love the comfort of being close to home. Ideal for evening 
+            study sessions with friends, as long as you don’t mind a bit of noise.<br><br>
+
+            <strong>5. ETF Building Benches</strong> – Outdoor but shaded, with a nice breeze. Excellent for reading on days 
+            when you don’t want to be stuck inside.<br><br>
+
+            <strong>6. New Lecture Theatre (NLT) Balconies</strong> – Quiet, breezy, and with a nice view of campus. 
+            One of the most underrated spots.<br><br>
+
+            <strong>7. FUTO ICT Center</strong> – If you need fast internet for research, this is the place to be. 
+            Just come early to secure a seat.<br><br>
+
+            <strong>8. School of Management Sciences (SOBS) Complex</strong> – Known for its clean, quiet classrooms and 
+            less crowded environment.<br><br>
+
+            <strong>9. Open Field by the Senate Building</strong> – Bring a mat and enjoy nature while studying. 
+            Great for group brainstorming sessions or light reading.<br><br>
+
+            <strong>10. The Chapel Area</strong> – Surprisingly quiet and peaceful, perfect for those who like a 
+            serene, distraction-free zone.<br><br>
+
+            💡 <em>Pro Tip:</em> Try rotating between different spots during the semester — you’ll stay more focused 
+            and discover where you work best!
+        </p>
+        <a href="javascript:void(0)" class="read-more" onclick="togglePost(this)">
+            Read More <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<script>
+function togglePost(element) {
+    const postCard = element.closest('.post-card');
+    const fullText = postCard.querySelector('.post-full');
+    const excerpt = postCard.querySelector('.post-excerpt');
+
+    const isOpen = fullText.classList.contains('open');
+
+    if (isOpen) {
+        fullText.classList.remove('open');
+        setTimeout(() => excerpt.style.display = "block", 300);
+        element.innerHTML = 'Read More <i class="fas fa-arrow-right"></i>';
+    } else {
+        excerpt.style.display = "none";
+        fullText.classList.add('open');
+        element.innerHTML = 'Read Less <i class="fas fa-arrow-up"></i>';
+    }
+}
+</script>
+
     <script async="async" data-cfasync="false" src="//pl27528645.effectivecpmrate.com/51a2253bbc16d874c2bac145fc07bb49/invoke.js"></script>
 <div id="container-51a2253bbc16d874c2bac145fc07bb49"></div>
 
