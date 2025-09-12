@@ -1386,7 +1386,7 @@ button:focus,
 .download-section {
     margin: 2rem 0;
     padding: 1rem;
-    background: #100227;
+    background: #f7f7f7;
     border-left: 4px solid #ff6600;
     border-radius: 10px;
 }
@@ -1396,12 +1396,17 @@ button:focus,
     margin-top: 10px;
     padding: 12px 20px;
     background: #ff6600;
-    color: #100227;
+    color: #fff;
     font-weight: bold;
     border-radius: 8px;
     text-decoration: none;
     transition: background 0.3s ease;
 }
+
+.download-btn:hover {
+    background: #e25500;
+}
+
 
 .download-btn:hover {
     background: #e25500;
