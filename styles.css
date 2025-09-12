@@ -1411,3 +1411,17 @@ button:focus,
 .download-btn:hover {
     background: #e25500;
 }
+body.dark-mode .download-section {
+    background: #1e1e1e; /* Dark background */
+    color: #f1f1f1; /* Light text */
+    border-left: 4px solid #ffa500; /* Softer orange for dark mode */
+}
+
+body.dark-mode .download-btn {
+    background: #ffa500; /* Slightly lighter button for contrast */
+    color: #000; /* Black text for better readability */
+}
+
+body.dark-mode .download-btn:hover {
+    background: #ffb733; /* Hover effect in dark mode */
+}
